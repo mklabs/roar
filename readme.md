@@ -1,4 +1,4 @@
-# roar
+# roar [![Build Status](https://secure.travis-ci.org/mklabs/roar.png)](http://travis-ci.org/mklabs/roar)
 
 > CLI utilities / helpers based on meow and minimist
 

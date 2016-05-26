@@ -1,7 +1,7 @@
 {
-  "name": "",
+  "name": "roar",
   "version": "0.1.0",
-  "description": "",
+  "description": "CLI utilities / helpers",
   "main": "index.js",
   "scripts": {
     "pretest": "babel lib -d src",
