@@ -1,0 +1,15 @@
+#!/usr/bin/env node
+
+
+const roar = require('../..')(require('meow'));
+const cli = roar({
+  stream: process.stdout
+});
+
+cli.info('log info OK');
+cli.warn('log warn OK');
+cli.error('log error OK');
+cli.debug('log debug OK');
+cli.success('log success OK');
+
+cli.end(2);
