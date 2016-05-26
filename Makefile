@@ -14,7 +14,7 @@ eslint:
 	DEBUG="eslint:cli-engine" eslint .
 
 watch:
-	watchd lib/**.js test/**.js package.json -c 'bake babel'
+	watchd lib/**.js test/* test/**/*.js *.{js,json} -c 'bake test'
 
 release: version push publish
 
