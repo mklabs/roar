@@ -2,6 +2,8 @@
 
 > CLI utilities / helpers based on meow and minimist
 
+> [wip](https://github.com/mklabs/roar/issues/1)
+
 ## Overview
 
 - Parses arguments with either meow or minimist
