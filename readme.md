@@ -26,6 +26,8 @@ npm install minimist mklabs/roar -S
 npm install meow mklabs/roar -S
 ```
 
+---
+
 ```js
 // To use minimist
 const parser = require('minimist');
@@ -37,6 +39,49 @@ const roaw = require('roar')(parser);
 
 const cli = roar();
 ```
+
+---
+
+
+```js
+const { CLI } = require('roar-cli');
+
+class Command extends CLI {
+  get example() {
+    return 'cmd <argument> [options]';
+  }
+
+  get more() {
+    return `
+  Examples:
+
+    $ cmd *.js foo/
+`;
+  }
+
+  // Used to parse arguments with minimist
+  get alias() {
+    return {
+      h: 'help',
+      v: 'version',
+      d: 'debug',
+      f: 'force'
+    };
+  }
+
+  // Used to generate the help output, along with example / more above
+  get flags() {
+    return {
+      help: 'Show this help output',
+      version: 'Show package version',
+      debug: 'Enable extended log output',
+      force: 'Force file write even if already existing',
+      skip: 'Skip scripts hook'
+    };
+  }
+}
+```
+
 
 ## roar.CLI
 
@@ -92,7 +137,7 @@ While you can create a CLI instance and interact with it, you can extend
 greater flexibility and is more suited to complex scenario.
 
 ```js
-const { CLI } = require('roar');
+const { CLI } = require('roar-cli');
 
 class Command extends CLI {
   get example() {
