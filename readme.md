@@ -31,11 +31,11 @@ npm install meow mklabs/roar -S
 ```js
 // To use minimist
 const parser = require('minimist');
-const roar = require('roar')(parser);
+const roar = require('roar-cli')(parser);
 
 // To use meow
 const parser = require('meow');
-const roaw = require('roar')(parser);
+const roar = require('roar-cli')(parser);
 
 const cli = roar();
 ```
